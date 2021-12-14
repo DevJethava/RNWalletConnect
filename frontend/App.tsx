@@ -18,7 +18,6 @@ function Web3ApiExample(): JSX.Element {
     const connector = useWalletConnect();
 
     const [address, setAddress] = useState("")
-    const [balance, setBalance] = useState(0.0)
     const [amount, setAmount] = useState(0.0)
 
     const [transectionHash, setTransectionhash] = useState()
@@ -67,22 +66,6 @@ function Web3ApiExample(): JSX.Element {
         return true
     }
 
-    // if (isFetching) {
-    //     return (
-    //         <View style={styles.marginLarge}>
-    //             <Text>Fetching token-balances...</Text>
-    //         </View>
-    //     );
-    // }
-
-    // if (error) {
-    //     return (
-    //         <View style={styles.marginLarge}>
-    //             <Text>Error:</Text>
-    //             <Text>{JSON.stringify(error)}</Text>
-    //         </View>
-    //     );
-    // }
 
     return (
         <View style={styles.marginLarge}>
@@ -146,10 +129,6 @@ function UserExample(): JSX.Element {
     // console.log("USER", JSON.stringify(connector.accounts))
     return (
         <View style={styles.marginLarge}>
-            {/* <Text style={styles.weightHeavey}>UserName: {user.getUsername()}</Text> */}
-            {/* <Text style={styles.weightHeavey}>
-                User Email: {user.getEmail() ?? "-"}
-            </Text> */}
             <Text numberOfLines={1} ellipsizeMode="tail" style={styles.weightHeavey}>
                 User Address: {connector.accounts[0]}
             </Text>
